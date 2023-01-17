@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddOutputCache(options =>
 {
     options.AddBasePolicy(builder =>
-        builder.Expire(TimeSpan.FromSeconds(10)));
+        builder.Expire (TimeSpan.FromSeconds(10)));
     
     options.AddPolicy("Expire20", builder =>
         builder.Expire(TimeSpan.FromSeconds(20)));
@@ -50,3 +50,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
